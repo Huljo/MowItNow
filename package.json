@@ -1,0 +1,24 @@
+{
+  "name": "motitnow-xy-nesw",
+  "version": "0.0.1",
+  "description": "Controller for MowItNow mower model:xy-nesw",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Huljo/MowItNow-xy-nesw.git"
+  },
+  "keywords": [
+    "mowitnow",
+    "mower",
+    "controller"
+  ],
+  "author": "Huljo (Josselin.M)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Huljo/MowItNow-xy-nesw/issues"
+  },
+  "homepage": "https://github.com/Huljo/MowItNow-xy-nesw#readme"
+}
