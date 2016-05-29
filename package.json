@@ -1,7 +1,7 @@
 {
-  "name": "motitnow-xy-nesw",
+  "name": "motitnow-xynesw-controller",
   "version": "0.0.1",
-  "description": "Controller for MowItNow mower model:xy-nesw",
+  "description": "GPS controller for MowItNow mower model:xy-nesw",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
