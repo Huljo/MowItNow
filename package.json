@@ -1,8 +1,7 @@
 {
-  "name": "motitnow-xynesw-controller",
+  "name": "mowtitnow-rowers",
   "version": "0.0.1",
-  "description": "GPS controller for MowItNow mower model:xy-nesw",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "mocha"
   },
@@ -20,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/Huljo/MowItNow-xy-nesw/issues"
   },
-  "homepage": "https://github.com/Huljo/MowItNow-xy-nesw#readme"
+  "homepage": "https://github.com/Huljo/MowItNow-xy-nesw#readme",
+  "dependencies": {
+    "bluebird": "^3.4.0"
+  }
 }
