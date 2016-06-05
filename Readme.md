@@ -56,7 +56,6 @@ $ npm test
 [npm-url]: https://npmjs.org/package/mowitnow
 [coveralls-image]: https://img.shields.io/scrutinizer/g/huljo/mowitnow.svg?style=flat-square&label=score
 [coveralls-url]: https://scrutinizer-ci.com/g/Huljo/MowItNow
-[build-image]: https://img.shields.io/scrutinizer/build/g/huljo/mowitnow.svg?label=build&style=flat-square
-[build-url]: https://scrutinizer-ci.com/g/Huljo/MowItNow
+[build-image]: https://img.shields.io/travis/Huljo/MowItNow.svg?label=build&style=flat-square
+[build-url]: https://travis-ci.org/Huljo/MowItNow
 [license-image]: https://img.shields.io/npm/l/mowitnow.svg?style=flat-square
-
