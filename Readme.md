@@ -3,9 +3,9 @@
   Effective mower controller
 
   [![Linux Build][build-image]][build-url]
-  [![Score][score-image]][score-url]
   [![Coverage][coverage-image]][coverage-url]
   [![CodeClimate][codeclimate-image]][codeclimate-url]
+  [![Score][score-image]][score-url]
   [![NPM Version][npm-image]][npm-url]
 
 ## Installation
