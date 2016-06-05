@@ -11,7 +11,7 @@ describe('Move', function() {
     describe('runInstruction', function() {
         var grid = new Grid(new Position({x:5,y:5}, 'N')),
             position = new Position({x:2,y:2}, 'E'),
-            mower = new Mower(0, grid, position, ['A']),
+            mower = new Mower(0, grid, position, ['D']),
             move = new Move(mower, grid);
 
         it('should run instruction ’A’ with cardinal ’E’ and change mower’s position to: x+1', function (done) {
@@ -76,7 +76,7 @@ describe('Move', function() {
     describe('updatePosition', function() {
         var grid = new Grid(new Position({x:7,y:7}, 'N')),
             position = new Position({x:2,y:2}, 'E'),
-            mower = new Mower(0, grid, position, ['A']),
+            mower = new Mower(0, grid, position, ['G']),
             move = new Move(mower, grid);
 
         it('should update a position when the target position is not occupied', function () {
