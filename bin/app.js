@@ -15,8 +15,8 @@ if(process.argv.indexOf('run') !== -1) {
     app.run();
 }
 else if(process.argv.indexOf('help') !== -1) {
-    console.log("Usage:\n> mowitnow run [configPath]");
+    process.stdout.write("Usage:\n> mowitnow run [configPath]");
 }
 else {
-    console.log("Unknown command.\nType ’mowitnow help’ to know about all commands.");
+    process.stdout.write("Unknown command.\nType ’mowitnow help’ to know about all commands.");
 }
