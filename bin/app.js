@@ -8,10 +8,11 @@ if(process.argv.indexOf('run') !== -1) {
     var args = process.argv.slice(process.argv.indexOf('run')+1);
     var defaultConfig = __dirname+'/../config/default';
     var app = new App({
-        configFile : args[0] || defaultConfig
+        configFile : args[0] || defaultConfig,
+        logEnabled: true
     });
     app.run();
 }
 if(process.argv.indexOf('help') !== -1) {
-    console.log("Usage: > mowitnow run [configPath]");
+    console.log("Usage: \n> mowitnow run [configPath]");
 }
