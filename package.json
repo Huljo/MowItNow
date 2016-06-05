@@ -3,7 +3,9 @@
   "version": "1.0.2",
   "main": "lib/index.js",
   "scripts": {
-    "test": "gulp test"
+    "test": "gulp test",
+    "cover": "istanbul cover _mocha",
+    "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls"
   },
   "bin": {
     "mowitnow": "./bin/app.js"
@@ -43,7 +45,6 @@
     "jshint": "^2.9.2",
     "jshint-stylish": "^2.2.0",
     "mocha": "^2.5.3",
-    "mocha-coveralls-reporter": "0.0.5",
     "mocha-lcov-reporter": "^1.2.0"
   }
 }
