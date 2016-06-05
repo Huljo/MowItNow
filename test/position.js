@@ -20,4 +20,9 @@ describe('Position', function() {
             new Position({x:1,y:1}, false);
         }).to.throwException(/Cardinal point is not valid/);
     });
+    it('should not throw an error when position is valid', function () {
+        expect(function() {
+            new Position({x:1,y:1}, 'N');
+        }).to.not.throwException();
+    });
 });
