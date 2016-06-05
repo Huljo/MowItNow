@@ -61,7 +61,7 @@ $ npm test
 [build-image]: https://img.shields.io/travis/Huljo/MowItNow.svg?label=build&style=flat-square
 [build-url]: https://travis-ci.org/Huljo/MowItNow
 [coverage-image]: https://img.shields.io/coveralls/Huljo/MowItNow.svg?style=flat-square
-[coverage-url]: https://travis-ci.org/Huljo/MowItNow
+[coverage-url]: https://coveralls.io/github/Huljo/MowItNow
 [codeclimate-image]: https://img.shields.io/codeclimate/github/Huljo/MowItNow.svg?style=flat-square
-[codeclimate-url]: https://travis-ci.org/Huljo/MowItNow
+[codeclimate-url]: https://codeclimate.com/github/Huljo/MowItNow
 [license-image]: https://img.shields.io/npm/l/mowitnow.svg?style=flat-square
