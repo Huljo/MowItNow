@@ -1,6 +1,10 @@
 engines:
   eslint:
     enabled: true
+  csslint:
+    enabled: false
+  duplication:
+    enabled: false
 ratings:
   paths:
   - "lib/**.js"
