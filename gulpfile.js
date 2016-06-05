@@ -29,7 +29,7 @@ gulp.task('test-min', function() {
 
 gulp.task('lint', function() {
     return gulp.src('lib/**/*.js')
-        .pipe(jshint())
+        .pipe(jshint({node:true}))
         .pipe(jshint.reporter(jshStylish));
 });
 
