@@ -2,17 +2,21 @@
 
 'use strict';
 
-var App = require('../lib/app');
+var path = require('path'),
+    App = require('../lib/app');
 
 if(process.argv.indexOf('run') !== -1) {
     var args = process.argv.slice(process.argv.indexOf('run')+1);
-    var defaultConfig = __dirname+'/../config/default';
+    var defaultConfig = path.normalize(__dirname+'/../config/default');
     var app = new App({
         configFile : args[0] || defaultConfig,
         logEnabled: true
     });
     app.run();
 }
-if(process.argv.indexOf('help') !== -1) {
-    console.log("Usage: \n> mowitnow run [configPath]");
+else if(process.argv.indexOf('help') !== -1) {
+    console.log("Usage:\n> mowitnow run [configPath]");
+}
+else {
+    console.log("Unknown command.\nType ’mowitnow help’ to know about all commands.");
 }
