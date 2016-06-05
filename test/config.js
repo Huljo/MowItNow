@@ -9,6 +9,7 @@ describe('Config', function() {
         expect(config.topRightPos).to.only.have.keys('x', 'y');
     });
     it('should set config.mowers', function () {
+        console.log(config);
         expect(config.mowers).to.not.be.empty();
     });
 });
