@@ -43,6 +43,7 @@
     "jshint": "^2.9.2",
     "jshint-stylish": "^2.2.0",
     "mocha": "^2.5.3",
+    "mocha-coveralls-reporter": "0.0.5",
     "mocha-lcov-reporter": "^1.2.0"
   }
 }
