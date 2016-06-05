@@ -33,7 +33,6 @@ describe('Mower', function() {
                 done();
             });
         });
-
     });
     describe('runStep', function () {
         var grid = new Grid(new Position({x:10,y:10}, 'N'));
@@ -69,7 +68,6 @@ describe('Mower', function() {
                 done();
             });
         });
-
     });
     describe('isValid', function () {
         var grid = new Grid(new Position({x:8,y:8}, 'N')),

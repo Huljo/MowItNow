@@ -74,11 +74,10 @@ describe('Move', function() {
         });
         it('should throw an error when instruction is not valid', function (done) {
             move.mower.position = new Position({x:2,y:2}, 'S');
-                move.runInstruction('U').catch(function(err) {
-                    expect(err).to.be.a(Error);
-                    done();
-                });
-
+            move.runInstruction('U').catch(function(err) {
+                expect(err).to.be.a(Error);
+                done();
+            });
         });
     });
     describe('updatePosition', function() {
@@ -87,18 +86,48 @@ describe('Move', function() {
             mower = new Mower(0, grid, position, ['G']),
             move = new Move(mower, grid);
 
-        it('should update a position when the target position is not occupied', function () {
+        it('should update a position to x+1', function () {
             var newPosition = new Position({x:position.x+1,y:position.y}, 'E');
             move.updatePosition(newPosition);
             expect(move.mower.position.x).to.equal(position.x+1);
         });
-        it('should not update a position when the target position is occupied', function () {
-            move.mower.position = new Position({x:2,y:2}, 'E'); // set mower's position
-            move.grid.occupation[move.mower.id] = move.mower.position; // set current mower's occupation
-            move.grid.occupation[1] = new Position({x:3,y:2}, 'E'); // add fake item in object grid.occupation
-            var newPosition = new Position({x:position.x+1,y:position.y}, 'E'); // position to try
-            move.updatePosition(newPosition); // prevent moving if the target cell is occupied by another item by excluding this item from the comparision
-            expect(move.mower.position.x).to.equal(position.x); // X still unchanged
+        it('should update a position to x-1', function () {
+            var newPosition = new Position({x:position.x-1,y:position.y}, 'E');
+            move.updatePosition(newPosition);
+            expect(move.mower.position.x).to.equal(position.x-1);
+        });
+        it('should update a position to y+1', function () {
+            var newPosition = new Position({x:position.x,y:position.y+1}, 'E');
+            move.updatePosition(newPosition);
+            expect(move.mower.position.y).to.equal(position.y+1);
+        });
+        it('should update a position to y-1', function () {
+            var newPosition = new Position({x:position.x,y:position.y-1}, 'E');
+            move.updatePosition(newPosition);
+            expect(move.mower.position.y).to.equal(position.y-1);
+        });
+    });
+    describe('isNextPositionAllowed', function() {
+        var grid = new Grid(new Position({x:7,y:7}, 'N')),
+            position = new Position({x:2,y:2}, 'E'),
+            mower = new Mower(0, grid, position, ['G']),
+            move = new Move(mower, grid);
+
+        it('should return false for testing a position x:20 and y:-20', function () {
+            var newPosition = new Position({x:20,y:-20}, 'E');
+            expect(move.isNextPositionAllowed(newPosition)).to.equal(false);
+        });
+        it('should return false for testing a position x:-20 and y:20', function () {
+            var newPosition = new Position({x:-20,y:20}, 'E');
+            expect(move.isNextPositionAllowed(newPosition)).to.equal(false);
+        });
+        it('should return false for testing a x:5 and y:-20', function () {
+            var newPosition = new Position({x:5,y:-20}, 'E');
+            expect(move.isNextPositionAllowed(newPosition)).to.equal(false);
+        });
+        it('should return false for testing a x:-20 and y:5', function () {
+            var newPosition = new Position({x:-20,y:5}, 'E');
+            expect(move.isNextPositionAllowed(newPosition)).to.equal(false);
         });
     });
     describe('goForward', function() {
@@ -125,12 +154,6 @@ describe('Move', function() {
             move.mower.position = new Position({x:2,y:2}, 'S');
             move.goForward();
             expect(move.mower.position.y).to.equal(position.y-1);
-        });
-        it('should throw an error when cardinal is not valid', function () {
-            move.mower.position.c = 'U';
-            expect(function() {
-                move.goForward();
-            }).to.throwError();
         });
     });
     describe('turn', function() {
