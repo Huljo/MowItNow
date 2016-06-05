@@ -3,7 +3,8 @@
   Effective mower controller
 
   [![Linux Build][build-image]][build-url]
-  [![Corveralls][coveralls-image]][coveralls-url]
+  [![Score][score-image]][score-url]
+  [![Coverage][coverage-image]][coverage-url]
   [![NPM Version][npm-image]][npm-url]
 
 ## Installation
@@ -54,8 +55,10 @@ $ npm test
 
 [npm-image]: https://img.shields.io/npm/v/mowitnow.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/mowitnow
-[coveralls-image]: https://img.shields.io/scrutinizer/g/huljo/mowitnow.svg?style=flat-square&label=score
-[coveralls-url]: https://scrutinizer-ci.com/g/Huljo/MowItNow
+[score-image]: https://img.shields.io/scrutinizer/g/huljo/mowitnow.svg?style=flat-square
+[score-url]: https://scrutinizer-ci.com/g/Huljo/MowItNow
 [build-image]: https://img.shields.io/travis/Huljo/MowItNow.svg?label=build&style=flat-square
 [build-url]: https://travis-ci.org/Huljo/MowItNow
+[coverage-image]: https://img.shields.io/coveralls/Huljo/MowItNow.svg?style=flat-square
+[coverage-url]: https://travis-ci.org/Huljo/MowItNow
 [license-image]: https://img.shields.io/npm/l/mowitnow.svg?style=flat-square

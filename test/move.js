@@ -72,6 +72,14 @@ describe('Move', function() {
                 done();
             });
         });
+        it('should throw an error when instruction is not valid', function (done) {
+            move.mower.position = new Position({x:2,y:2}, 'S');
+                move.runInstruction('U').catch(function(err) {
+                    expect(err).to.be.a(Error);
+                    done();
+                });
+
+        });
     });
     describe('updatePosition', function() {
         var grid = new Grid(new Position({x:7,y:7}, 'N')),

@@ -33,4 +33,17 @@ describe('Grid', function() {
         });
 
     });
+    describe('isValid', function () {
+        it('should throw an error when X is not valid', function () {
+            expect(function() {
+                new Grid({x:false,y:5});
+            }).to.throwException(/Coordinates are not valid/);
+        });
+        it('should throw an error when Y is not valid', function () {
+            expect(function() {
+                new Grid({x:5,y:false});
+            }).to.throwException(/Coordinates are not valid/);
+        });
+
+    });
 });
