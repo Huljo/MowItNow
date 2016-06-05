@@ -20,8 +20,8 @@ describe('Grid', function() {
 
     });
     describe('getCellOccupation', function () {
-        var grid = new Grid(new Position({x:5,y:5}, 'N'));
-        var itemPosition = new Position({x:4,y:4}, 'N');
+        var grid = new Grid(new Position({x:5,y:5}, 'N')),
+            itemPosition = new Position({x:4,y:4}, 'N');
         grid.setItemPosition(0, itemPosition); // set a test item
         it('should return ’id’ of item who match an occupied cell', function () {
             var position = new Position({x:4,y:4}, 'N');
