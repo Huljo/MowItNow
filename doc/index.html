@@ -1,0 +1,838 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset='utf-8' />
+  <title>  | Documentation</title>
+  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Source+Code+Pro:400,500,700' rel='stylesheet' type='text/css'>
+  <link href='assets/bass.css' type='text/css' rel='stylesheet' />
+  <link href='assets/style.css' type='text/css' rel='stylesheet' />
+  <link href='assets/github.css' type='text/css' rel='stylesheet' />
+</head>
+<body class='documentation'>
+  <div class='container'>
+    <div class='clearfix md-mxn2'>
+      <div class='fixed md-show fix-3 overflow-auto max-height-100'>
+        <div class='py1 px2'>
+          <h3 class='mb0 no-anchor'></h3>
+          <div class='mb1'><code></code></div>
+          <input
+            placeholder='Filter'
+            id='filter-input'
+            class='col12 block field'
+            type='text' />
+          <div id='toc'>
+              <a
+                href='#App'
+                class='block bold'>
+                App
+              </a>
+                <a
+                  href='#App.createMowers'
+                  class='regular block'>
+                  #createMowers
+                </a>
+                <a
+                  href='#App.run'
+                  class='regular block'>
+                  #run
+                </a>
+              <a
+                href='#Config'
+                class='block bold'>
+                Config
+              </a>
+              <a
+                href='#Grid'
+                class='block bold'>
+                Grid
+              </a>
+                <a
+                  href='#Grid.getCellOccupation'
+                  class='regular block'>
+                  #getCellOccupation
+                </a>
+                <a
+                  href='#Grid.isValid'
+                  class='regular block'>
+                  #isValid
+                </a>
+                <a
+                  href='#Grid.setItemPosition'
+                  class='regular block'>
+                  #setItemPosition
+                </a>
+              <a
+                href='#Move'
+                class='block bold'>
+                Move
+              </a>
+                <a
+                  href='#Move.goForward'
+                  class='regular block'>
+                  #goForward
+                </a>
+                <a
+                  href='#Move.runInstruction'
+                  class='regular block'>
+                  #runInstruction
+                </a>
+                <a
+                  href='#Move.turn'
+                  class='regular block'>
+                  #turn
+                </a>
+                <a
+                  href='#Move.updatePosition'
+                  class='regular block'>
+                  #updatePosition
+                </a>
+              <a
+                href='#isCardinal'
+                class='block bold'>
+                isCardinal
+              </a>
+              <a
+                href='#isCoordinates'
+                class='block bold'>
+                isCoordinates
+              </a>
+              <a
+                href='#isCoordinates'
+                class='block bold'>
+                isCoordinates
+              </a>
+              <a
+                href='#isGrid'
+                class='block bold'>
+                isGrid
+              </a>
+              <a
+                href='#isInstructions'
+                class='block bold'>
+                isInstructions
+              </a>
+              <a
+                href='#isPosition'
+                class='block bold'>
+                isPosition
+              </a>
+              <a
+                href='#isPosition'
+                class='block bold'>
+                isPosition
+              </a>
+              <a
+                href='#Position'
+                class='block bold'>
+                Position
+              </a>
+                <a
+                  href='#Position.isValid'
+                  class='regular block'>
+                  #isValid
+                </a>
+              <a
+                href='#Mower'
+                class='block bold'>
+                Mower
+              </a>
+                <a
+                  href='#Mower.isValid'
+                  class='regular block'>
+                  #isValid
+                </a>
+                <a
+                  href='#Mower.runStep'
+                  class='regular block'>
+                  #runStep
+                </a>
+                <a
+                  href='#Mower.start'
+                  class='regular block'>
+                  #start
+                </a>
+              <a
+                href='#parseConfig'
+                class='block bold'>
+                parseConfig
+              </a>
+              <a
+                href='#readFile'
+                class='block bold'>
+                readFile
+              </a>
+          </div>
+        </div>
+      </div>
+      <div class='fix-margin-3'>
+        <div class='px2'>
+<div class='py1'><section class='py2 clearfix'>
+  <h2 id='App' class='mt0'>
+    App<span class='gray'>(options)</span>
+  </h2>
+  <p>Set up App with <code>options</code>
+which is responsible for multiple-unit mower&apos;s remote control</p>
+<p>Options:</p>
+<ul>
+<li><code>configFile</code> config file path</li>
+</ul>
+
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code> <strong>options</strong>
+          :
+          <div class='force-inline'>
+            
+          </div>
+        </li>
+    </ul>
+      <h4>Instance members</h4>
+        <div class='collapsible' id='App.createMowers'>
+          <a href='#App.createMowers'>
+            <code>
+              #createMowers<span class='gray'>(mowersConf)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Create mowers</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2'>
+            <section class='py2 clearfix'>
+              <h2 id='App.createMowers' class='mt0'>
+                createMowers<span class='gray'>(mowersConf)</span>
+              </h2>
+              <p>Create mowers</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code> <strong>mowersConf</strong>
+                      :
+                      <div class='force-inline'>
+                        
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='App.run'>
+          <a href='#App.run'>
+            <code>
+              #run<span class='gray'></span>
+            </code>
+            <div class='force-inline'>
+              <p>Start mower&apos;s movement.</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2'>
+            <section class='py2 clearfix'>
+              <h2 id='App.run' class='mt0'>
+                run<span class='gray'></span>
+              </h2>
+              <p>Start mower&apos;s movement.</p>
+            
+            </section>
+          </div>
+        </div>
+</section>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='Config' class='mt0'>
+    Config<span class='gray'>(configPath)</span>
+  </h2>
+  <p>Set up Config with <code>configPath</code>
+which is responsible for loading and parsing config file.</p>
+
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code> <strong>configPath</strong>
+          :
+          <div class='force-inline'>
+            
+          </div>
+        </li>
+    </ul>
+      <h4>Returns</h4>
+      <code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code></code>
+      
+      <div class='force-inline'>
+        
+      </div>
+</section>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='Grid' class='mt0'>
+    Grid<span class='gray'>(topRightPos)</span>
+  </h2>
+  <p>Set up Grid with <code>topRightPos</code></p>
+<p>Parameters:</p>
+<ul>
+<li><code>topRightPos</code> coordinates of the cell at the top right of the grid. ({x:1,y:1})</li>
+</ul>
+
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code> <strong>topRightPos</strong>
+          :
+          <div class='force-inline'>
+            
+          </div>
+        </li>
+    </ul>
+      <h4>Instance members</h4>
+        <div class='collapsible' id='Grid.getCellOccupation'>
+          <a href='#Grid.getCellOccupation'>
+            <code>
+              #getCellOccupation<span class='gray'>(position)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Get cell occupation as a boolean</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2'>
+            <section class='py2 clearfix'>
+              <h2 id='Grid.getCellOccupation' class='mt0'>
+                getCellOccupation<span class='gray'>(position)</span>
+              </h2>
+              <p>Get cell occupation as a boolean</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code> <strong>position</strong>
+                      :
+                      <div class='force-inline'>
+                        
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='Grid.isValid'>
+          <a href='#Grid.isValid'>
+            <code>
+              #isValid<span class='gray'></span>
+            </code>
+            <div class='force-inline'>
+              <p>Types validator</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2'>
+            <section class='py2 clearfix'>
+              <h2 id='Grid.isValid' class='mt0'>
+                isValid<span class='gray'></span>
+              </h2>
+              <p>Types validator</p>
+            
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='Grid.setItemPosition'>
+          <a href='#Grid.setItemPosition'>
+            <code>
+              #setItemPosition<span class='gray'>(id, position)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Save item&apos;s position inside the grid</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2'>
+            <section class='py2 clearfix'>
+              <h2 id='Grid.setItemPosition' class='mt0'>
+                setItemPosition<span class='gray'>(id, position)</span>
+              </h2>
+              <p>Save item&apos;s position inside the grid</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></code> <strong>id</strong>
+                      :
+                      <div class='force-inline'>
+                        
+                      </div>
+                    </li>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code> <strong>position</strong>
+                      :
+                      <div class='force-inline'>
+                        
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+</section>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='Move' class='mt0'>
+    Move<span class='gray'>(mower, grid)</span>
+  </h2>
+  <p>Set up Move with <code>mower</code> and <code>grid</code>
+which is responsible for moving mowers</p>
+
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code> <strong>mower</strong>
+          :
+          <div class='force-inline'>
+            
+          </div>
+        </li>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code> <strong>grid</strong>
+          :
+          <div class='force-inline'>
+            
+          </div>
+        </li>
+    </ul>
+      <h4>Instance members</h4>
+        <div class='collapsible' id='Move.goForward'>
+          <a href='#Move.goForward'>
+            <code>
+              #goForward<span class='gray'></span>
+            </code>
+            <div class='force-inline'>
+              <p>Move a mower forward.
+The direction is the actual cardinal.</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2'>
+            <section class='py2 clearfix'>
+              <h2 id='Move.goForward' class='mt0'>
+                goForward<span class='gray'></span>
+              </h2>
+              <p>Move a mower forward.
+            The direction is the actual cardinal.</p>
+            
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='Move.runInstruction'>
+          <a href='#Move.runInstruction'>
+            <code>
+              #runInstruction<span class='gray'>(instruction)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Call the movement method from an instruction</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2'>
+            <section class='py2 clearfix'>
+              <h2 id='Move.runInstruction' class='mt0'>
+                runInstruction<span class='gray'>(instruction)</span>
+              </h2>
+              <p>Call the movement method from an instruction</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code> <strong>instruction</strong>
+                      :
+                      <div class='force-inline'>
+                        
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='Move.turn'>
+          <a href='#Move.turn'>
+            <code>
+              #turn<span class='gray'>(instruction)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Move a mower to the left or the right.</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2'>
+            <section class='py2 clearfix'>
+              <h2 id='Move.turn' class='mt0'>
+                turn<span class='gray'>(instruction)</span>
+              </h2>
+              <p>Move a mower to the left or the right.</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code> <strong>instruction</strong>
+                      :
+                      <div class='force-inline'>
+                        
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='Move.updatePosition'>
+          <a href='#Move.updatePosition'>
+            <code>
+              #updatePosition<span class='gray'>(newPosition)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Update mower&apos;s position if not occupied</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2'>
+            <section class='py2 clearfix'>
+              <h2 id='Move.updatePosition' class='mt0'>
+                updatePosition<span class='gray'>(newPosition)</span>
+              </h2>
+              <p>Update mower&apos;s position if not occupied</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code> <strong>newPosition</strong>
+                      :
+                      <div class='force-inline'>
+                        
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+</section>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='isCardinal' class='mt0'>
+    isCardinal<span class='gray'>(cardinal)</span>
+  </h2>
+  <p>Cardinal validator helper</p>
+
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code> <strong>cardinal</strong>
+          :
+          <div class='force-inline'>
+            
+          </div>
+        </li>
+    </ul>
+</section>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='isCoordinates' class='mt0'>
+    isCoordinates<span class='gray'>(x, y)</span>
+  </h2>
+  <p>Coordinates validator helper</p>
+
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></code> <strong>x</strong>
+          :
+          <div class='force-inline'>
+            
+          </div>
+        </li>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></code> <strong>y</strong>
+          :
+          <div class='force-inline'>
+            
+          </div>
+        </li>
+    </ul>
+</section>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='isCoordinates' class='mt0'>
+    isCoordinates<span class='gray'>(x, y)</span>
+  </h2>
+  <p>Coordinates validator helper</p>
+
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></code> <strong>x</strong>
+          :
+          <div class='force-inline'>
+            
+          </div>
+        </li>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></code> <strong>y</strong>
+          :
+          <div class='force-inline'>
+            
+          </div>
+        </li>
+    </ul>
+</section>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='isGrid' class='mt0'>
+    isGrid<span class='gray'>(grid)</span>
+  </h2>
+  <p>Grid validator helper</p>
+
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code> <strong>grid</strong>
+          :
+          <div class='force-inline'>
+            
+          </div>
+        </li>
+    </ul>
+</section>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='isInstructions' class='mt0'>
+    isInstructions<span class='gray'>(instructions)</span>
+  </h2>
+  <p>Instructions validator helper</p>
+
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code> <strong>instructions</strong>
+          :
+          <div class='force-inline'>
+            
+          </div>
+        </li>
+    </ul>
+</section>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='isPosition' class='mt0'>
+    isPosition<span class='gray'>(position)</span>
+  </h2>
+  <p>Position validator helper</p>
+
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code> <strong>position</strong>
+          :
+          <div class='force-inline'>
+            
+          </div>
+        </li>
+    </ul>
+</section>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='isPosition' class='mt0'>
+    isPosition<span class='gray'>(position)</span>
+  </h2>
+  <p>Position validator helper</p>
+
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code> <strong>position</strong>
+          :
+          <div class='force-inline'>
+            
+          </div>
+        </li>
+    </ul>
+</section>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='Position' class='mt0'>
+    Position<span class='gray'>(coordinate, cardinal)</span>
+  </h2>
+  <p>Set up Position with <code>coordinate</code> and <code>cardinal</code></p>
+
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code> <strong>coordinate</strong>
+          :
+          <div class='force-inline'>
+            
+          </div>
+        </li>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code> <strong>cardinal</strong>
+          :
+          <div class='force-inline'>
+            
+          </div>
+        </li>
+    </ul>
+      <h4>Instance members</h4>
+        <div class='collapsible' id='Position.isValid'>
+          <a href='#Position.isValid'>
+            <code>
+              #isValid<span class='gray'></span>
+            </code>
+            <div class='force-inline'>
+              <p>Types validator</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2'>
+            <section class='py2 clearfix'>
+              <h2 id='Position.isValid' class='mt0'>
+                isValid<span class='gray'></span>
+              </h2>
+              <p>Types validator</p>
+            
+            </section>
+          </div>
+        </div>
+</section>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='Mower' class='mt0'>
+    Mower<span class='gray'>(id, grid, position, instructions)</span>
+  </h2>
+  <p>Set up Mower with <code>options</code></p>
+<p>Parameters:</p>
+<ul>
+<li><code>id</code> a valid number</li>
+<li><code>grid</code> a valid Grid object</li>
+<li><code>position</code> a valid Position object</li>
+<li><code>instructions</code> a valid Array that contains only the following instructions : &apos;A&apos;, &apos;G&apos; and &apos;D&apos;.</li>
+</ul>
+
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></code> <strong>id</strong>
+          :
+          <div class='force-inline'>
+            
+          </div>
+        </li>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code> <strong>grid</strong>
+          :
+          <div class='force-inline'>
+            
+          </div>
+        </li>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code> <strong>position</strong>
+          :
+          <div class='force-inline'>
+            
+          </div>
+        </li>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code> <strong>instructions</strong>
+          :
+          <div class='force-inline'>
+            
+          </div>
+        </li>
+    </ul>
+      <h4>Instance members</h4>
+        <div class='collapsible' id='Mower.isValid'>
+          <a href='#Mower.isValid'>
+            <code>
+              #isValid<span class='gray'></span>
+            </code>
+            <div class='force-inline'>
+              <p>Types validator</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2'>
+            <section class='py2 clearfix'>
+              <h2 id='Mower.isValid' class='mt0'>
+                isValid<span class='gray'></span>
+              </h2>
+              <p>Types validator</p>
+            
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='Mower.runStep'>
+          <a href='#Mower.runStep'>
+            <code>
+              #runStep<span class='gray'>(step, end)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Run one step then pass to next instruction or resolve promise when instructions are finished</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2'>
+            <section class='py2 clearfix'>
+              <h2 id='Mower.runStep' class='mt0'>
+                runStep<span class='gray'>(step, end)</span>
+              </h2>
+              <p>Run one step then pass to next instruction or resolve promise when instructions are finished</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">Number</a></code> <strong>step</strong>
+                      :
+                      <div class='force-inline'>
+                        
+                      </div>
+                    </li>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function">Function</a></code> <strong>end</strong>
+                      :
+                      <div class='force-inline'>
+                        
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='Mower.start'>
+          <a href='#Mower.start'>
+            <code>
+              #start<span class='gray'></span>
+            </code>
+            <div class='force-inline'>
+              <p>Start mower&apos;s instructions</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2'>
+            <section class='py2 clearfix'>
+              <h2 id='Mower.start' class='mt0'>
+                start<span class='gray'></span>
+              </h2>
+              <p>Start mower&apos;s instructions</p>
+            
+            </section>
+          </div>
+        </div>
+</section>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='parseConfig' class='mt0'>
+    parseConfig<span class='gray'>(configStr)</span>
+  </h2>
+  <p>Return configuration file&apos;s content as a formatted object</p>
+
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code> <strong>configStr</strong>
+          :
+          <div class='force-inline'>
+            
+          </div>
+        </li>
+    </ul>
+      <h4>Returns</h4>
+      <code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code></code>
+      
+      <div class='force-inline'>
+        
+      </div>
+</section>
+</div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='readFile' class='mt0'>
+    readFile<span class='gray'>(configPath)</span>
+  </h2>
+  <p>Read config file and return output</p>
+
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code> <strong>configPath</strong>
+          :
+          <div class='force-inline'>
+            
+          </div>
+        </li>
+    </ul>
+      <h4>Returns</h4>
+      <code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code></code>
+      
+      <div class='force-inline'>
+        
+      </div>
+</section>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src='assets/anchor.js'></script>
+  <script src='assets/site.js'></script>
+</body>
+</html>
