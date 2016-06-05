@@ -100,7 +100,6 @@ describe('Move', function() {
             move.updatePosition(newPosition); // prevent moving if the target cell is occupied by another item by excluding this item from the comparision
             expect(move.mower.position.x).to.equal(position.x); // X still unchanged
         });
-
     });
     describe('goForward', function() {
         var grid = new Grid(new Position({x:6,y:6}, 'N')),
@@ -127,7 +126,12 @@ describe('Move', function() {
             move.goForward();
             expect(move.mower.position.y).to.equal(position.y-1);
         });
-
+        it('should throw an error when cardinal is not valid', function () {
+            move.mower.position.c = 'U';
+            expect(function() {
+                move.goForward();
+            }).to.throwError();
+        });
     });
     describe('turn', function() {
         var grid = new Grid(new Position({x:10,y:10}, 'N')),
@@ -154,6 +158,11 @@ describe('Move', function() {
             move.turn('D');
             expect(move.mower.position.c).to.equal('N');
         });
-
+        it('should throw an error when instruction is not valid', function () {
+            move.mower.position.c = 'N';
+            expect(function() {
+                move.turn('U');
+            }).to.throwError();
+        });
     });
 });

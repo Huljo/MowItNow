@@ -17,7 +17,6 @@ describe('Grid', function() {
             grid.setItemPosition(0, position);
             expect(grid.occupation[0]).to.equal(position);
         });
-
     });
     describe('getCellOccupation', function () {
         var grid = new Grid(new Position({x:5,y:5}, 'N')),
@@ -31,7 +30,11 @@ describe('Grid', function() {
             var position = new Position({x:3,y:3}, 'N');
             expect(grid.getCellOccupation(position)).to.equal(null);
         });
-
+        it('should throw an error when position is not valid', function () {
+            expect(function() {
+                grid.getCellOccupation(false);
+            }).to.throwException(/Position is not valid/);
+        });
     });
     describe('isValid', function () {
         it('should throw an error when X is not valid', function () {
@@ -44,6 +47,5 @@ describe('Grid', function() {
                 new Grid({x:5,y:false});
             }).to.throwException(/Coordinates are not valid/);
         });
-
     });
 });
