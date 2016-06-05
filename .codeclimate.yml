@@ -7,9 +7,9 @@ engines:
     enabled: false
 ratings:
   paths:
-  - "lib/**.js"
+  - lib/**
 exclude_paths:
-- bin/**/*
 - test/**/*
-- doc/**/*
 - node_modules/**/*
+- bin/**/*
+- doc/**/*
