@@ -5,6 +5,7 @@ ratings:
   paths:
   - "lib/**.js"
 exclude_paths:
+- bin/**/*
 - test/**/*
 - doc/**/*
 - node_modules/**/*
