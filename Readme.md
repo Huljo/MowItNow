@@ -5,6 +5,7 @@
   [![Linux Build][build-image]][build-url]
   [![Score][score-image]][score-url]
   [![Coverage][coverage-image]][coverage-url]
+  [![CodeClimate][codeclimate-image]][codeclimate-url]
   [![NPM Version][npm-image]][npm-url]
 
 ## Installation
@@ -61,4 +62,6 @@ $ npm test
 [build-url]: https://travis-ci.org/Huljo/MowItNow
 [coverage-image]: https://img.shields.io/coveralls/Huljo/MowItNow.svg?style=flat-square
 [coverage-url]: https://travis-ci.org/Huljo/MowItNow
+[codeclimate-image]: https://img.shields.io/codeclimate/github/Huljo/MowItNow.svg?style=flat-square
+[codeclimate-url]: https://travis-ci.org/Huljo/MowItNow
 [license-image]: https://img.shields.io/npm/l/mowitnow.svg?style=flat-square
