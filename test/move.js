@@ -74,7 +74,7 @@ describe('Move', function() {
         });
     });
     describe('updatePosition', function() {
-        var grid = new Grid(new Position({x:5,y:5}, 'N')),
+        var grid = new Grid(new Position({x:7,y:7}, 'N')),
             position = new Position({x:2,y:2}, 'E'),
             mower = new Mower(0, grid, position, ['A']),
             move = new Move(mower, grid);
@@ -95,7 +95,7 @@ describe('Move', function() {
 
     });
     describe('goForward', function() {
-        var grid = new Grid(new Position({x:5,y:5}, 'N')),
+        var grid = new Grid(new Position({x:6,y:6}, 'N')),
             position = new Position({x:2,y:2}, 'E'),
             mower = new Mower(0, grid, position, ['A']),
             move = new Move(mower, grid);
