@@ -35,7 +35,7 @@ describe('Mower', function() {
         });
     });
     describe('runStep', function () {
-        var grid = new Grid(new Position({x:10,y:10}, 'N'));
+        var grid = new Grid(new Position({x:9,y:9}, 'S'));
         it('should stop at positon 3 2 E', function (done) {
             var position = new Position({x:2,y:2}, 'E');
             var mower = new Mower(0, grid, position, ['A']);

@@ -82,27 +82,27 @@ describe('Move', function() {
     });
     describe('updatePosition', function() {
         var grid = new Grid(new Position({x:7,y:7}, 'N')),
-            position = new Position({x:2,y:2}, 'E'),
+            position = new Position({x:2,y:2}, 'W'),
             mower = new Mower(0, grid, position, ['G']),
             move = new Move(mower, grid);
 
         it('should update a position to x+1', function () {
-            var newPosition = new Position({x:position.x+1,y:position.y}, 'E');
+            var newPosition = new Position({x:position.x+1,y:position.y}, 'W');
             move.updatePosition(newPosition);
             expect(move.mower.position.x).to.equal(position.x+1);
         });
         it('should update a position to x-1', function () {
-            var newPosition = new Position({x:position.x-1,y:position.y}, 'E');
+            var newPosition = new Position({x:position.x-1,y:position.y}, 'W');
             move.updatePosition(newPosition);
             expect(move.mower.position.x).to.equal(position.x-1);
         });
         it('should update a position to y+1', function () {
-            var newPosition = new Position({x:position.x,y:position.y+1}, 'E');
+            var newPosition = new Position({x:position.x,y:position.y+1}, 'W');
             move.updatePosition(newPosition);
             expect(move.mower.position.y).to.equal(position.y+1);
         });
         it('should update a position to y-1', function () {
-            var newPosition = new Position({x:position.x,y:position.y-1}, 'E');
+            var newPosition = new Position({x:position.x,y:position.y-1}, 'W');
             move.updatePosition(newPosition);
             expect(move.mower.position.y).to.equal(position.y-1);
         });
