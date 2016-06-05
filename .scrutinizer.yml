@@ -1,7 +1,6 @@
 filter:
-    paths:
-        - lib/*
+    excluded_paths:
+        - tests/*
 
 checks:
-  javascript:
-                                  duplication: false
+  javascript: true

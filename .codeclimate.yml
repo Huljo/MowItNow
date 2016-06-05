@@ -1,0 +1,10 @@
+engines:
+  eslint:
+    enabled: true
+ratings:
+  paths:
+  - "lib/**.js"
+exclude_paths:
+- test/**/*
+- doc/**/*
+- node_modules/**/*
