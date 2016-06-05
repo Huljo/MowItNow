@@ -1,6 +1,6 @@
 {
   "name": "mowitnow",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "lib/index.js",
   "scripts": {
     "test": "gulp test"
