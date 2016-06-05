@@ -36,7 +36,7 @@ describe('Mower', function() {
 
     });
     describe('runStep', function () {
-        var grid = new Grid(new Position({x:5,y:5}, 'N'));
+        var grid = new Grid(new Position({x:10,y:10}, 'N'));
         it('should stop at positon 3 2 E', function (done) {
             var position = new Position({x:2,y:2}, 'E');
             var mower = new Mower(0, grid, position, ['A']);
@@ -72,7 +72,7 @@ describe('Mower', function() {
 
     });
     describe('isValid', function () {
-        var grid = new Grid(new Position({x:5,y:5}, 'N')),
+        var grid = new Grid(new Position({x:8,y:8}, 'N')),
             position = new Position({x:3,y:3}, 'E');
         it('should throw an error when ID is not valid', function () {
             expect(function() {

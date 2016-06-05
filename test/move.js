@@ -122,9 +122,9 @@ describe('Move', function() {
 
     });
     describe('turn', function() {
-        var grid = new Grid(new Position({x:5,y:5}, 'N')),
+        var grid = new Grid(new Position({x:10,y:10}, 'N')),
             position = new Position({x:2,y:2}, 'E'),
-            mower = new Mower(0, grid, position, ['A']),
+            mower = new Mower(0, grid, position, ['G']),
             move = new Move(mower, grid);
 
         it('should move mower to the left with cardinal ’E’ and change mower’s position to: c=’N’', function () {
