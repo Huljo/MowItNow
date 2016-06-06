@@ -20,7 +20,7 @@ $ npm install mowitnow
 var App = require('mowitnow');
 var app = new App({
         configFile : '[config-file-path]'
-        logEnabled : true
+        debug : true
     });
 app.run();
 ```
