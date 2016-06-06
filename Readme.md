@@ -35,7 +35,7 @@ Examples:
 
 `> mowitnow run my.cfg`
 
- **Options:**
+ **Commands:**
 
 ```bash
     run                      Run instructions from the given config file and return the final positions of mowers
