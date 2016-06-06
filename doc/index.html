@@ -33,6 +33,11 @@
                   #createMowers
                 </a>
                 <a
+                  href='#App.log'
+                  class='regular block'>
+                  #log
+                </a>
+                <a
                   href='#App.run'
                   class='regular block'>
                   #run
@@ -63,6 +68,11 @@
                   #setItemPosition
                 </a>
               <a
+                href='#getNextPositionForward'
+                class='block bold'>
+                getNextPositionForward
+              </a>
+              <a
                 href='#Move'
                 class='block bold'>
                 Move
@@ -71,6 +81,11 @@
                   href='#Move.goForward'
                   class='regular block'>
                   #goForward
+                </a>
+                <a
+                  href='#Move.isNextPositionAllowed'
+                  class='regular block'>
+                  #isNextPositionAllowed
                 </a>
                 <a
                   href='#Move.runInstruction'
@@ -208,6 +223,35 @@ which is responsible for multiple-unit mower&apos;s remote control</p>
                 <h4>Parameters</h4>
                 <ul class='suppress-p-margin'>
                     <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code> <strong>mowersConf</strong>
+                      :
+                      <div class='force-inline'>
+                        
+                      </div>
+                    </li>
+                </ul>
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='App.log'>
+          <a href='#App.log'>
+            <code>
+              #log<span class='gray'>(message)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Stdout filtered by log option</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2'>
+            <section class='py2 clearfix'>
+              <h2 id='App.log' class='mt0'>
+                log<span class='gray'>(message)</span>
+              </h2>
+              <p>Stdout filtered by log option</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code> <strong>message</strong>
                       :
                       <div class='force-inline'>
                         
@@ -367,6 +411,23 @@ which is responsible for loading and parsing config file.</p>
         </div>
 </section>
 </div><div class='py1'><section class='py2 clearfix'>
+  <h2 id='getNextPositionForward' class='mt0'>
+    getNextPositionForward<span class='gray'>(position)</span>
+  </h2>
+  <p>Move a mower forward.
+The direction is the actual cardinal.</p>
+
+    <h4>Parameters</h4>
+    <ul class='suppress-p-margin'>
+        <li> <strong>position</strong>
+          :
+          <div class='force-inline'>
+            
+          </div>
+        </li>
+    </ul>
+</section>
+</div><div class='py1'><section class='py2 clearfix'>
   <h2 id='Move' class='mt0'>
     Move<span class='gray'>(mower, grid)</span>
   </h2>
@@ -408,6 +469,41 @@ The direction is the actual cardinal.</p>
               <p>Move a mower forward.
             The direction is the actual cardinal.</p>
             
+            </section>
+          </div>
+        </div>
+        <div class='collapsible' id='Move.isNextPositionAllowed'>
+          <a href='#Move.isNextPositionAllowed'>
+            <code>
+              #isNextPositionAllowed<span class='gray'>(position)</span>
+            </code>
+            <div class='force-inline'>
+              <p>Return false if the given position is occupied or not allowed</p>
+
+            </div>
+          </a>
+          <div class='collapser border px2'>
+            <section class='py2 clearfix'>
+              <h2 id='Move.isNextPositionAllowed' class='mt0'>
+                isNextPositionAllowed<span class='gray'>(position)</span>
+              </h2>
+              <p>Return false if the given position is occupied or not allowed</p>
+            
+                <h4>Parameters</h4>
+                <ul class='suppress-p-margin'>
+                    <li><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></code> <strong>position</strong>
+                      :
+                      <div class='force-inline'>
+                        
+                      </div>
+                    </li>
+                </ul>
+                  <h4>Returns</h4>
+                  <code><code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Boolean</a></code></code>
+                  
+                  <div class='force-inline'>
+                    
+                  </div>
             </section>
           </div>
         </div>
