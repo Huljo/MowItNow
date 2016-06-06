@@ -1,6 +1,7 @@
 filter:
     excluded_paths:
-        - tests/**/*
+        - tests/*
+        - doc/*
 
 checks:
   javascript: true
