@@ -27,7 +27,7 @@ app.run();
 
 The interface for command-line usage is fairly simplistic at this stage, as seen in the following usage section.
 
-### Usage
+#### Usage
  `mowitnow [command] <options>`
 
 Examples:
