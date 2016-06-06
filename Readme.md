@@ -17,7 +17,7 @@ $ npm install mowitnow
 ## Usage
 
 ```js
-var App = require('mowitnow')
+var App = require('mowitnow');
 var app = new App({
         configFile : '[config-file-path]'
     });
