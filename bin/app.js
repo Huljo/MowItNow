@@ -10,7 +10,7 @@ if(process.argv.indexOf('run') !== -1) {
     var defaultConfig = path.normalize('config/default');
     var app = new App({
         configFile : args[0] || defaultConfig,
-        logEnabled: true
+        debug: true
     });
     app.run();
 }
