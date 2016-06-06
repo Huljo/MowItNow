@@ -113,19 +113,19 @@ describe('Move', function() {
             mower = new Mower(0, grid, position, ['G']),
             move = new Move(mower, grid);
 
-        it('should return false for testing a position x:20 and y:-20', function () {
+        it('should return false for testing position x:20 and y:-20', function () {
             var newPosition = new Position({x:20,y:-20}, 'E');
             expect(move.isNextPositionAllowed(newPosition)).to.equal(false);
         });
-        it('should return false for testing a position x:-20 and y:20', function () {
+        it('should return false for testing position x:-20 and y:20', function () {
             var newPosition = new Position({x:-20,y:20}, 'E');
             expect(move.isNextPositionAllowed(newPosition)).to.equal(false);
         });
-        it('should return false for testing a x:5 and y:-20', function () {
+        it('should return false for testing position x:5 and y:-20', function () {
             var newPosition = new Position({x:5,y:-20}, 'E');
             expect(move.isNextPositionAllowed(newPosition)).to.equal(false);
         });
-        it('should return false for testing a x:-20 and y:5', function () {
+        it('should return false for testing position x:-20 and y:5', function () {
             var newPosition = new Position({x:-20,y:5}, 'E');
             expect(move.isNextPositionAllowed(newPosition)).to.equal(false);
         });
